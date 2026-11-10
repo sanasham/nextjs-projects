@@ -13,10 +13,10 @@ import {
   Mail,
   MapPin,
   Clock,
-  MessageCircle,
   Send,
   CheckCircle2,
 } from "lucide-react";
+import { WhatsAppIcon } from "@/spa/components/common/WhatsAppIcon";
 
 export function ContactView() {
   const { t, locale } = useI18n();
@@ -83,7 +83,7 @@ export function ContactView() {
                 rel="noopener noreferrer"
                 className="mt-5 flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#25D366] text-sm font-semibold text-white hover:brightness-105"
               >
-                <MessageCircle className="size-5" />
+                <WhatsAppIcon className="size-5" />
                 {t("contact.whatsappCta")}
               </a>
             </div>

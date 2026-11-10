@@ -29,7 +29,6 @@ import {
   Minus,
   Plus,
   ShoppingBag,
-  MessageCircle,
   Check,
   ChevronRight,
   ShieldCheck,
@@ -41,6 +40,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/spa/config/site";
+import { WhatsAppIcon } from "@/spa/components/common/WhatsAppIcon";
 
 export function ProductView() {
   const { route, navigate } = useRouter();
@@ -260,7 +260,7 @@ function ProductDetail({ product }: { product: Product }) {
             variant="outline"
             className="h-12 border-brand-green bg-transparent text-brand-green hover:bg-brand-cream"
           >
-            <MessageCircle className="size-5" />
+            <WhatsAppIcon className="size-5" />
             {t("common.buyNow")}
           </Button>
 

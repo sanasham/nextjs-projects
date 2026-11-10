@@ -4,9 +4,10 @@ import { useState } from "react";
 import { useI18n } from "@/spa/i18n";
 import { useRouter, Link } from "@/spa/router";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, Package, ArrowRight, MessageCircle } from "lucide-react";
+import { CheckCircle2, Package, ArrowRight } from "lucide-react";
 import { siteConfig } from "@/spa/config/site";
 import { openWhatsapp } from "@/spa/utils/whatsapp";
+import { WhatsAppIcon } from "@/spa/components/common/WhatsAppIcon";
 
 interface OrderInfo {
   orderNo: string;
@@ -92,7 +93,7 @@ export function ConfirmationView() {
             )
           }
         >
-          <MessageCircle className="size-4" />
+          <WhatsAppIcon className="size-4" />
           {t("contact.whatsappCta")}
         </Button>
       </div>

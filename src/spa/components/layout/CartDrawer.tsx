@@ -21,7 +21,8 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { Minus, Plus, Trash2, ShoppingBag, X, MessageCircle } from "lucide-react";
+import { Minus, Plus, Trash2, ShoppingBag, X } from "lucide-react";
+import { WhatsAppIcon } from "@/spa/components/common/WhatsAppIcon";
 
 interface CartDrawerProps {
   open: boolean;
@@ -218,7 +219,7 @@ export function CartDrawer({ open, onOpenChange }: CartDrawerProps) {
                   variant="outline"
                   className="h-11 w-full border-brand-green text-brand-green hover:bg-brand-cream"
                 >
-                  <MessageCircle className="size-4" />
+                  <WhatsAppIcon className="size-4" />
                   {t("cart.whatsapp")}
                 </Button>
                 <Link

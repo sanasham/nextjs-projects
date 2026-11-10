@@ -19,9 +19,9 @@ import {
   Star,
   Quote,
   Gift,
-  MessageCircle,
   Heart,
 } from "lucide-react";
+import { WhatsAppIcon } from "@/spa/components/common/WhatsAppIcon";
 
 export function HomeView() {
   const { t, locale } = useI18n();
@@ -328,7 +328,7 @@ export function HomeView() {
       <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center gap-4 rounded-3xl border border-brand-green/20 bg-brand-cream/40 p-8 text-center shadow-sm sm:p-12">
           <span className="flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg">
-            <MessageCircle className="size-7" />
+            <WhatsAppIcon className="size-8" />
           </span>
           <h2 className="font-display text-2xl font-medium text-brand-green sm:text-3xl text-balance">
             {locale === "te" ? "వాట్సాప్‌లో ఆర్డర్ చేయండి" : "Prefer to order on WhatsApp?"}
@@ -344,7 +344,7 @@ export function HomeView() {
             rel="noopener noreferrer"
             className="inline-flex h-12 items-center gap-2 rounded-full bg-[#25D366] px-7 text-sm font-semibold text-white shadow-md hover:brightness-105"
           >
-            <MessageCircle className="size-5" />
+            <WhatsAppIcon className="size-5" />
             {t("contact.whatsappCta")}
           </a>
         </div>

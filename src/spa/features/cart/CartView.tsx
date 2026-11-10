@@ -14,7 +14,8 @@ import { siteConfig } from "@/spa/config/site";
 import { openWhatsapp, buildCartWhatsappMessage } from "@/spa/utils/whatsapp";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { Minus, Plus, Trash2, ShoppingBag, ArrowRight, MessageCircle, Truck } from "lucide-react";
+import { Minus, Plus, Trash2, ShoppingBag, ArrowRight, Truck } from "lucide-react";
+import { WhatsAppIcon } from "@/spa/components/common/WhatsAppIcon";
 
 export function CartView() {
   const { t, locale } = useI18n();
@@ -193,7 +194,7 @@ export function CartView() {
                 variant="outline"
                 className="h-11 w-full border-brand-green text-brand-green hover:bg-brand-cream"
               >
-                <MessageCircle className="size-4" />
+                <WhatsAppIcon className="size-4" />
                 {t("cart.whatsapp")}
               </Button>
             </div>
