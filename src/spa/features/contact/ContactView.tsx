@@ -83,7 +83,7 @@ export function ContactView() {
                 rel="noopener noreferrer"
                 className="mt-5 flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#25D366] text-sm font-semibold text-white hover:brightness-105"
               >
-                <WhatsAppIcon className="size-5" />
+                <WhatsAppIcon className="size-5" monochrome />
                 {t("contact.whatsappCta")}
               </a>
             </div>

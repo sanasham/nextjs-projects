@@ -93,7 +93,7 @@ export function ConfirmationView() {
             )
           }
         >
-          <WhatsAppIcon className="size-4" />
+          <WhatsAppIcon className="size-5" />
           {t("contact.whatsappCta")}
         </Button>
       </div>

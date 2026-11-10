@@ -219,7 +219,7 @@ export function CartDrawer({ open, onOpenChange }: CartDrawerProps) {
                   variant="outline"
                   className="h-11 w-full border-brand-green text-brand-green hover:bg-brand-cream"
                 >
-                  <WhatsAppIcon className="size-4" />
+                  <WhatsAppIcon className="size-5" />
                   {t("cart.whatsapp")}
                 </Button>
                 <Link
