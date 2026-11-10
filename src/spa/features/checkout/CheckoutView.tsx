@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { useForm, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
 import { useI18n } from "@/spa/i18n";
 import { useRouter, Link } from "@/spa/router";
 import { useCartStore } from "@/spa/store/cartStore";
@@ -15,6 +14,7 @@ import {
   formatPrice,
 } from "@/spa/utils/cart";
 import { siteConfig } from "@/spa/config/site";
+import { checkoutSchema as schema, type CheckoutFormValues as FormValues } from "./schema";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -32,20 +32,6 @@ import {
   Lock,
   ArrowLeft,
 } from "lucide-react";
-
-const schema = z.object({
-  name: z.string().min(3),
-  mobile: z.string().regex(/^[6-9]\d{9}$/),
-  email: z.string().email(),
-  address: z.string().min(10),
-  state: z.string().min(2),
-  city: z.string().min(2),
-  pincode: z.string().regex(/^\d{6}$/),
-  paymentMethod: z.enum(["cod", "upi-demo", "card-demo"]),
-  notes: z.string().optional(),
-});
-
-type FormValues = z.infer<typeof schema>;
 
 const indianStates = [
   "Telangana", "Andhra Pradesh", "Karnataka", "Tamil Nadu", "Kerala",
