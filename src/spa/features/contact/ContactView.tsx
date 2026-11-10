@@ -93,9 +93,7 @@ export function ContactView() {
               <div className="relative aspect-[4/3] w-full bg-muted">
                 <iframe
                   title={t("contact.addressLabel")}
-                  src={`https://maps.google.com/maps?q=${encodeURIComponent(
-                    siteConfig.mapEmbedQuery
-                  )}&t=&z=14&ie=UTF8&iwloc=&output=embed`}
+                  src={`https://maps.google.com/maps?q=${siteConfig.mapLat},${siteConfig.mapLng}&z=16&output=embed`}
                   className="size-full border-0"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"

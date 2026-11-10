@@ -14,6 +14,9 @@ export const siteConfig = {
   contactPhone: "+91 79892 25946",
   businessHours: "Mon – Sat, 9:00 AM – 7:00 PM", // placeholder
   addressLine: "Patelguda, Hyderabad, Telangana 502319",
+  // Exact business location (decoded from the client's Google Maps plus code G7RM+432).
+  mapLat: 17.5402625,
+  mapLng: 78.2826406,
   // Google Maps embed query — sourced from the client's Maps link.
   mapEmbedQuery: "Patelguda, Hyderabad, Telangana 502319",
   mapLink: "https://maps.app.goo.gl/sKYTuFhqvK9CKYsN8?g_st=aw",
