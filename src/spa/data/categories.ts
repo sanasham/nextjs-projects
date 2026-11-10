@@ -1,0 +1,46 @@
+import type { Category } from "@/spa/types";
+
+export const categories: Category[] = [
+  {
+    id: "pickles",
+    slug: "pickles",
+    nameEn: "Pickles",
+    nameTe: "ఊరగాయలు",
+    taglineEn: "Sun-cured, hand-mixed Andhra classics",
+    taglineTe: "ఎండలో పులియబెట్టిన ఆంధ్ర వంటకాలు",
+    image: "/products/cat-pickles.png",
+  },
+  {
+    id: "snacks",
+    slug: "snacks",
+    nameEn: "Traditional Snacks",
+    nameTe: "సంప్రదాయ స్నాక్స్",
+    taglineEn: "Crunchy, savoury & freshly fried",
+    taglineTe: "రుచికరమైన తాజా వంటకాలు",
+    image: "/products/cat-snacks.png",
+  },
+  {
+    id: "sweets",
+    slug: "sweets",
+    nameEn: "Sweets",
+    nameTe: "మిఠాయిలు",
+    taglineEn: "Jaggery & ghee festival treats",
+    taglineTe: "బెల్లం, నెయ్యితో చేసినవి",
+    image: "/products/cat-sweets.png",
+  },
+  {
+    id: "spices",
+    slug: "spices",
+    nameEn: "Spice Powders",
+    nameTe: "కారం పొడులు",
+    taglineEn: "Stone-ground aromatic blends",
+    taglineTe: "రోలుతో నూరిన సువాసన కలిగినవి",
+    image: "/products/cat-spices.png",
+  },
+];
+
+export const getCategoryById = (id: string): Category | undefined =>
+  categories.find((c) => c.id === id);
+
+export const getCategoryBySlug = (slug: string): Category | undefined =>
+  categories.find((c) => c.slug === slug);
