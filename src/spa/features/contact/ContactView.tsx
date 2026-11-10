@@ -88,17 +88,29 @@ export function ContactView() {
               </a>
             </div>
 
-            {/* Map placeholder */}
+            {/* Embedded Google Map */}
             <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
-              <div className="flex aspect-[4/3] items-center justify-center bg-muted text-center">
-                <div className="px-6">
-                  <MapPin className="mx-auto size-8 text-muted-foreground" />
-                  <p className="mt-2 text-sm text-muted-foreground">
-                    {locale === "te" ? "మ్యాప్ ఇక్కడ కనిపిస్తుంది" : "Map will appear here"}
-                  </p>
-                  <p className="mt-1 text-xs text-muted-foreground/70">{siteConfig.addressLine}</p>
-                </div>
+              <div className="relative aspect-[4/3] w-full bg-muted">
+                <iframe
+                  title={t("contact.addressLabel")}
+                  src={`https://maps.google.com/maps?q=${encodeURIComponent(
+                    siteConfig.mapEmbedQuery
+                  )}&t=&z=14&ie=UTF8&iwloc=&output=embed`}
+                  className="size-full border-0"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                />
               </div>
+              <a
+                href={siteConfig.mapLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 border-t border-border bg-brand-green px-4 py-3 text-sm font-medium text-brand-cream transition-colors hover:bg-brand-green-dark"
+              >
+                <MapPin className="size-4" />
+                {locale === "te" ? "దిశలు పొందండి" : "Get Directions"}
+              </a>
             </div>
           </div>
 

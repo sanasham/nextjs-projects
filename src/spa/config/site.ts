@@ -13,8 +13,10 @@ export const siteConfig = {
   contactEmail: "hello@devipickles.com", // placeholder
   contactPhone: "+91 79892 25946",
   businessHours: "Mon – Sat, 9:00 AM – 7:00 PM", // placeholder
-  addressLine: "Andhra Pradesh, India", // placeholder
-  mapEmbedQuery: "Hyderabad, Telangana, India",
+  addressLine: "Patelguda, Hyderabad, Telangana 502319",
+  // Google Maps embed query — sourced from the client's Maps link.
+  mapEmbedQuery: "Patelguda, Hyderabad, Telangana 502319",
+  mapLink: "https://maps.app.goo.gl/sKYTuFhqvK9CKYsN8?g_st=aw",
 
   currency: "INR",
   currencySymbol: "₹",
