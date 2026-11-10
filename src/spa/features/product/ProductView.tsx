@@ -5,6 +5,7 @@ import { useI18n } from "@/spa/i18n";
 import { useRouter, Link } from "@/spa/router";
 import { getProductBySlug, getRelatedProducts } from "@/spa/data/products";
 import { getCategoryById } from "@/spa/data/categories";
+import type { Product } from "@/spa/types";
 import {
   getDiscountPct,
   getVariant,

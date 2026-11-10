@@ -1,5 +1,6 @@
 import { siteConfig } from "@/spa/config/site";
-import type { CartLine, Product, WeightVariant } from "@/spa/types";
+import type { Product, WeightVariant } from "@/spa/types";
+import type { CartLine } from "./cart";
 import { formatPrice, getCartSubtotal, getShipping } from "./cart";
 
 /**
