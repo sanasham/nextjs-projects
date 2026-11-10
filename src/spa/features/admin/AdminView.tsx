@@ -91,10 +91,10 @@ export function AdminView() {
   };
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 animate-fade-in">
+    <div className="w-full max-w-7xl overflow-x-hidden px-4 py-6 sm:mx-auto sm:px-6 lg:px-8 animate-fade-in">
       <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
-        <div>
-          <div className="flex items-center gap-2">
+        <div className="min-w-0">
+          <div className="flex flex-wrap items-center gap-2">
             <h1 className="font-display text-2xl font-medium text-brand-green sm:text-3xl">
               {t("admin.title")}
             </h1>
@@ -113,14 +113,14 @@ export function AdminView() {
       {/* KPIs */}
       <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
         {kpis.map((kpi) => (
-          <div key={kpi.label} className="rounded-2xl border border-border bg-card p-4 shadow-sm sm:p-5">
+          <div key={kpi.label} className="min-w-0 overflow-hidden rounded-2xl border border-border bg-card p-4 shadow-sm sm:p-5">
             <div className="flex items-center justify-between">
               <span className={`flex size-9 items-center justify-center rounded-lg ${kpi.tint}`}>
                 <kpi.icon className="size-5" />
               </span>
               <span className="text-xs font-medium text-brand-green">{kpi.delta}</span>
             </div>
-            <p className="mt-3 text-xl font-bold text-brand-ink sm:text-2xl">{kpi.value}</p>
+            <p className="mt-3 text-lg font-bold text-brand-ink sm:text-2xl sm:break-normal break-all">{kpi.value}</p>
             <p className="text-xs text-muted-foreground">{kpi.label}</p>
           </div>
         ))}
