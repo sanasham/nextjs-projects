@@ -3,17 +3,17 @@
  * Replace placeholder values with real client information after approval.
  */
 export const siteConfig = {
-  brandName: "Jampani Andhra Foods",
-  brandNameTe: "జంపని ఆంధ్ర ఫుడ్స్",
-  brandTagline: "Tradition in Every Jar",
-  brandTaglineTe: "ప్రతి జాడీలో సంప్రదాయం",
+  brandName: "Devi Pickles",
+  brandNameTe: "దేవి పికల్స్",
+  brandTagline: "Every Product A1",
+  brandTaglineTe: "ప్రతి ప్రొడక్ట్ A1",
 
-  /** WhatsApp business number — PLACEHOLDER. Replace after client approval. */
-  whatsappNumber: "919000000000",
-  contactEmail: "hello@example.com", // placeholder
-  contactPhone: "+91 90000 00000", // placeholder
+  /** WhatsApp business number — sourced from client brand poster. */
+  whatsappNumber: "917989225946",
+  contactEmail: "hello@devipickles.com", // placeholder
+  contactPhone: "+91 79892 25946",
   businessHours: "Mon – Sat, 9:00 AM – 7:00 PM", // placeholder
-  addressLine: "Plot 12, Sample Road, Hyderabad, Telangana — 500001", // placeholder
+  addressLine: "Andhra Pradesh, India", // placeholder
   mapEmbedQuery: "Hyderabad, Telangana, India",
 
   currency: "INR",

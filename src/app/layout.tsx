@@ -18,9 +18,9 @@ const marcellus = Marcellus({
 });
 
 export const metadata: Metadata = {
-  title: "Jampani Andhra Foods — Traditional Telugu Pickles, Snacks & Sweets",
+  title: "Devi Pickles — Traditional Telugu Pickles, Snacks & Sweets",
   description:
-    "Premium homemade Andhra pickles, traditional snacks, sweets and spice powders crafted with authentic Telugu recipes. Order online across India. Prototype demo.",
+    "Premium homemade Andhra pickles, traditional snacks, sweets and spice powders crafted with authentic Telugu recipes. Every Product A1. Order online across India. Prototype demo.",
   keywords: [
     "Andhra pickles",
     "Telugu food",
@@ -29,12 +29,13 @@ export const metadata: Metadata = {
     "traditional snacks",
     "homemade pickles",
     "Indian sweets",
+    "Devi Pickles",
   ],
-  authors: [{ name: "Jampani Andhra Foods" }],
+  authors: [{ name: "Devi Pickles" }],
   icons: { icon: "/favicon.svg" },
   openGraph: {
-    title: "Jampani Andhra Foods",
-    description: "Traditional Telugu pickles, snacks & sweets, crafted with love.",
+    title: "Devi Pickles",
+    description: "Traditional Telugu pickles, snacks & sweets — Every Product A1.",
     type: "website",
   },
 };

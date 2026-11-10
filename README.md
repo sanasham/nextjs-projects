@@ -1,4 +1,4 @@
-# Jampani Andhra Foods — Telugu Food Ecommerce (Client Demo Prototype)
+# Devi Pickles — Telugu Food Ecommerce (Client Demo Prototype)
 
 A premium, mobile-first ecommerce prototype for a traditional Telugu/Andhra food
 brand. Built as a client demonstration project for design approval — **not** the
@@ -129,7 +129,7 @@ strings; interpolation uses `{{param}}`.
 
 ### Change the WhatsApp number
 Edit `src/spa/config/site.ts` → `whatsappNumber` (currently a placeholder
-`919000000000`). Replace with the client's official business number after
+`917989225946`). Replace with the client's official business number after
 approval. The same file holds contact email/phone/address placeholders and
 shipping thresholds.
 
@@ -187,5 +187,5 @@ These belong to a separately-approved production phase.
 
 ---
 
-© Jampani Andhra Foods (demo). All product data, prices, testimonials and
+© Devi Pickles (demo). All product data, prices, testimonials and
 business contact details are sample placeholders for client demonstration.
