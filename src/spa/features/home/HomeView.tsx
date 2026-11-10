@@ -22,6 +22,7 @@ import {
   Heart,
 } from "lucide-react";
 import { WhatsAppIcon } from "@/spa/components/common/WhatsAppIcon";
+import { Picture } from "@/spa/components/common/Picture";
 
 export function HomeView() {
   const { t, locale } = useI18n();
@@ -105,11 +106,12 @@ export function HomeView() {
           <div className="relative">
             <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-tr from-brand-gold/20 via-brand-cream/40 to-brand-green/10 blur-2xl" aria-hidden />
             <div className="overflow-hidden rounded-[1.75rem] border-4 border-white shadow-2xl shadow-brand-green/20">
-              <img
-                src="/products/hero.png"
+              <Picture
+                src="/products/hero"
                 alt={t("hero.title")}
                 className="aspect-[16/10] w-full object-cover"
-                fetchPriority="high"
+                priority
+                fetchPriorityHigh
               />
             </div>
             <div className="absolute -bottom-5 -left-3 hidden rounded-2xl border border-border bg-card p-3 shadow-lg sm:flex sm:items-center sm:gap-3">
@@ -139,10 +141,9 @@ export function HomeView() {
               className="group relative flex flex-col items-center overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
             >
               <div className="aspect-square w-full overflow-hidden bg-muted">
-                <img
+                <Picture
                   src={c.image}
                   alt={locale === "te" ? c.nameTe : c.nameEn}
-                  loading="lazy"
                   className="size-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
@@ -224,10 +225,9 @@ export function HomeView() {
           </div>
           <div className="order-1 md:order-2">
             <div className="overflow-hidden rounded-2xl border-4 border-brand-gold/30 shadow-xl">
-              <img
-                src="/products/about-story.png"
+              <Picture
+                src="/products/about-story"
                 alt={t("section.story.title")}
-                loading="lazy"
                 className="aspect-[4/3] w-full object-cover"
               />
             </div>

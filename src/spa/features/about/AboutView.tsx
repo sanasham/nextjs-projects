@@ -4,6 +4,7 @@ import { useI18n } from "@/spa/i18n";
 import { Link } from "@/spa/router";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/spa/components/common/SectionHeading";
+import { Picture } from "@/spa/components/common/Picture";
 import {
   Leaf,
   Sun,
@@ -38,11 +39,10 @@ export function AboutView() {
             <p className="max-w-xl text-brand-cream/80 text-balance">{t("about.subtitle")}</p>
           </div>
           <div className="overflow-hidden rounded-2xl border-4 border-brand-gold/30 shadow-xl">
-            <img
-              src="/products/about-story.png"
+            <Picture
+              src="/products/about-story"
               alt={t("about.title")}
               className="aspect-[4/3] w-full object-cover"
-              loading="lazy"
             />
           </div>
         </div>

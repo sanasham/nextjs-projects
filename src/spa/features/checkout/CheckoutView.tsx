@@ -15,6 +15,7 @@ import {
 } from "@/spa/utils/cart";
 import { siteConfig } from "@/spa/config/site";
 import { checkoutSchema as schema, type CheckoutFormValues as FormValues } from "./schema";
+import { Picture } from "@/spa/components/common/Picture";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -261,7 +262,7 @@ export function CheckoutView() {
                 return (
                   <li key={`${line.product.id}-${line.variant.id}`} className="flex gap-3">
                     <div className="relative size-14 shrink-0 overflow-hidden rounded-lg bg-muted">
-                      <img src={line.product.image} alt={name} className="size-full object-cover" loading="lazy" />
+                      <Picture src={line.product.image} alt={name} className="size-full object-cover" />
                       <span className="absolute -right-1 -top-1 flex size-5 items-center justify-center rounded-full bg-brand-terracotta text-[10px] font-bold text-white">
                         {line.quantity}
                       </span>

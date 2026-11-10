@@ -23,6 +23,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Minus, Plus, Trash2, ShoppingBag, X } from "lucide-react";
 import { WhatsAppIcon } from "@/spa/components/common/WhatsAppIcon";
+import { Picture } from "@/spa/components/common/Picture";
 
 interface CartDrawerProps {
   open: boolean;
@@ -119,11 +120,10 @@ export function CartDrawer({ open, onOpenChange }: CartDrawerProps) {
                         onClick={() => onOpenChange(false)}
                         className="size-20 shrink-0 overflow-hidden rounded-lg bg-muted"
                       >
-                        <img
+                        <Picture
                           src={line.product.image}
                           alt={name}
                           className="size-full object-cover"
-                          loading="lazy"
                         />
                       </Link>
                       <div className="flex min-w-0 flex-1 flex-col">

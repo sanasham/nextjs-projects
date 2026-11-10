@@ -41,6 +41,7 @@ import {
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/spa/config/site";
 import { WhatsAppIcon } from "@/spa/components/common/WhatsAppIcon";
+import { Picture } from "@/spa/components/common/Picture";
 
 export function ProductView() {
   const { route, navigate } = useRouter();
@@ -120,11 +121,12 @@ function ProductDetail({ product }: { product: Product }) {
         {/* Gallery */}
         <div className="flex flex-col gap-3">
           <div className="relative aspect-square overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
-            <img
+            <Picture
               src={product.gallery[activeImg] ?? product.image}
               alt={name}
               className="size-full object-cover"
-              fetchPriority="high"
+              priority
+              fetchPriorityHigh
             />
             <div className="absolute left-3 top-3 flex flex-col gap-1.5">
               {product.bestseller ? (
@@ -152,7 +154,7 @@ function ProductDetail({ product }: { product: Product }) {
                   )}
                   aria-label={`image ${i + 1}`}
                 >
-                  <img src={g} alt="" className="size-full object-cover" loading="lazy" />
+                  <Picture src={g} alt="" className="size-full object-cover" />
                 </button>
               ))}
             </div>

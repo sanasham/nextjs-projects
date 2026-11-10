@@ -16,6 +16,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Minus, Plus, Trash2, ShoppingBag, ArrowRight, Truck } from "lucide-react";
 import { WhatsAppIcon } from "@/spa/components/common/WhatsAppIcon";
+import { Picture } from "@/spa/components/common/Picture";
 
 export function CartView() {
   const { t, locale } = useI18n();
@@ -99,7 +100,7 @@ export function CartView() {
                     to={`/product/${line.product.slug}`}
                     className="size-20 shrink-0 overflow-hidden rounded-lg bg-muted sm:size-24"
                   >
-                    <img src={line.product.image} alt={name} className="size-full object-cover" loading="lazy" />
+                    <Picture src={line.product.image} alt={name} className="size-full object-cover" />
                   </Link>
                   <div className="flex min-w-0 flex-1 flex-col">
                     <div className="flex items-start justify-between gap-2">

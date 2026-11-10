@@ -3,6 +3,7 @@
 import { useI18n } from "@/spa/i18n";
 import { Link } from "@/spa/router";
 import { products } from "@/spa/data/products";
+import { Picture } from "@/spa/components/common/Picture";
 import { categories } from "@/spa/data/categories";
 import { formatPrice } from "@/spa/utils/cart";
 import { Badge } from "@/components/ui/badge";
@@ -161,7 +162,7 @@ export function AdminView() {
             {lowStock.map((p) => (
               <li key={p.id} className="flex items-center gap-3">
                 <div className="size-10 shrink-0 overflow-hidden rounded-lg bg-muted">
-                  <img src={p.image} alt="" className="size-full object-cover" loading="lazy" />
+                  <Picture src={p.image} alt="" className="size-full object-cover" />
                 </div>
                 <div className="min-w-0 flex-1">
                   <p className="line-clamp-1 text-xs font-medium text-brand-ink">
@@ -229,7 +230,7 @@ export function AdminView() {
                     {i + 1}
                   </span>
                   <div className="size-9 shrink-0 overflow-hidden rounded-lg bg-muted">
-                    <img src={p.image} alt="" className="size-full object-cover" loading="lazy" />
+                    <Picture src={p.image} alt="" className="size-full object-cover" />
                   </div>
                   <div className="min-w-0 flex-1">
                     <p className="line-clamp-1 text-xs font-medium text-brand-ink">
@@ -254,7 +255,7 @@ export function AdminView() {
               {products.map((p) => (
                 <li key={p.id} className="flex items-center gap-3 rounded-lg border border-border p-2">
                   <div className="size-9 shrink-0 overflow-hidden rounded-md bg-muted">
-                    <img src={p.image} alt="" className="size-full object-cover" loading="lazy" />
+                    <Picture src={p.image} alt="" className="size-full object-cover" />
                   </div>
                   <div className="min-w-0 flex-1">
                     <p className="line-clamp-1 text-xs font-medium text-brand-ink">

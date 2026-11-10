@@ -7,6 +7,7 @@ import { Star, Plus, Check } from "lucide-react";
 import type { Product } from "@/spa/types";
 import { useI18n } from "@/spa/i18n";
 import { Link } from "@/spa/router";
+import { Picture } from "@/spa/components/common/Picture";
 import { getDiscountPct, getVariant, formatPrice } from "@/spa/utils/cart";
 import { useCartStore } from "@/spa/store/cartStore";
 import { useState } from "react";
@@ -44,10 +45,9 @@ export function ProductCard({ product, className }: ProductCardProps) {
         className="relative block aspect-square overflow-hidden bg-muted"
         ariaLabel={name}
       >
-        <img
+        <Picture
           src={product.image}
           alt={name}
-          loading="lazy"
           className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute left-3 top-3 flex flex-col gap-1.5">

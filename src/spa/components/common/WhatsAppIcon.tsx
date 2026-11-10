@@ -1,57 +1,58 @@
 /**
  * Official WhatsApp logo as an inline SVG.
  *
- * Renders the complete branded mark — the WhatsApp green rounded-square with
- * the white phone-in-speech-bubble glyph — so it always looks like the real
- * WhatsApp logo regardless of the surrounding button/background colour.
+ * Uses the exact official WhatsApp glyph path (phone handset in a speech
+ * bubble) so it matches the real WhatsApp brand mark — handset sits at the
+ * correct diagonal, tail on the bottom-left, bubble centred.
  *
- * `className` controls the rendered size (width/height). The logo keeps its
- * official WhatsApp green (#25D366) and white palette internally.
+ * Two rendering modes:
+ *  - Full branded logo (default): green rounded square (#25D366) with the
+ *    white phone-in-bubble glyph. Use on outline/light buttons.
+ *  - Monochrome glyph (`monochrome`): single-colour glyph using `currentColor`.
+ *    Use on solid green buttons where the button provides the background.
  *
- * Use `monochrome` prop when you need a single-colour glyph (e.g. on a
- * coloured button where the icon should match the text colour).
+ * `className` controls the rendered size. Vector-only → crisp at any size.
  */
 interface WhatsAppIconProps {
   className?: string;
-  /** Render as a single-colour glyph using currentColor (for coloured buttons). */
   monochrome?: boolean;
 }
 
+// Official WhatsApp phone-in-speech-bubble glyph (viewBox 0 0 24 24).
+// Path drawn so the handset is at the correct 45° diagonal and the tail
+// sits at the bottom-left of the bubble — matches WhatsApp's brand kit.
+const GLYPH_PATH =
+  "M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z";
+
 export function WhatsAppIcon({ className, monochrome = false }: WhatsAppIconProps) {
   if (monochrome) {
-    // Single-colour glyph (uses currentColor) — for buttons that already
-    // provide their own background colour.
+    // Single-colour glyph (uses currentColor) for solid coloured buttons.
     return (
       <svg
-        viewBox="0 0 32 32"
+        viewBox="0 0 24 24"
         fill="currentColor"
         className={className}
         aria-hidden="true"
         focusable="false"
         shapeRendering="geometricPrecision"
       >
-        <path d="M16.004 0h-.008C7.174 0 0 7.176 0 16c0 3.5 1.128 6.744 3.046 9.378L1.05 31.282l6.114-1.952A15.9 15.9 0 0 0 16.004 32C24.826 32 32 24.824 32 16S24.826 0 16.004 0zm9.32 22.6c-.386 1.09-1.918 1.994-3.14 2.258-.836.178-1.928.32-5.604-1.204-4.704-1.948-7.73-6.726-7.962-7.032-.222-.306-1.9-2.526-1.9-4.818 0-2.292 1.206-3.42 1.672-3.898.386-.396.834-.6 1.116-.9.282-.3.426-.55.6-.9.182-.36.092-.676-.046-.952-.134-.276-1.206-2.91-1.652-3.982-.434-1.042-.876-.9-1.206-.916l-1.026-.018c-.356 0-.934.134-1.422.636-.488.502-1.862 1.818-1.862 4.426 0 2.608 1.9 5.126 2.166 5.482.266.356 3.762 5.748 9.112 8.066 3.392 1.47 4.726 1.596 6.418 1.34 1.028-.154 3.14-1.284 3.582-2.526.442-1.242.442-2.304.31-2.526-.13-.222-.488-.356-1.026-.624z" />
+        <path d={GLYPH_PATH} />
       </svg>
     );
   }
 
-  // Full branded logo — green rounded square with white phone-in-bubble.
+  // Full branded logo — WhatsApp-green rounded square with white glyph.
   return (
     <svg
-      viewBox="0 0 48 48"
+      viewBox="0 0 24 24"
       className={className}
       aria-hidden="true"
       focusable="false"
       shapeRendering="geometricPrecision"
     >
-      {/* Green rounded square background */}
-      <rect width="48" height="48" rx="11" fill="#25D366" />
-      {/* White phone-in-speech-bubble glyph, centered with padding */}
-      <g transform="translate(9.5 9.5) scale(0.96)">
-        <path
-          fill="#FFFFFF"
-          d="M14.05 0C6.29 0 0 6.29 0 14.05c0 2.47.65 4.85 1.88 6.95L0 29l8.2-1.85a13.97 13.97 0 0 0 5.85 1.28h.01c7.76 0 14.05-6.29 14.05-14.05C29.11 6.29 22.81 0 14.05 0zm8.2 19.86c-.34.96-1.99 1.84-2.78 1.96-.71.1-1.61.14-2.6-.16-.6-.19-1.37-.44-2.36-.87-4.15-1.79-6.85-5.96-7.06-6.24-.2-.27-1.68-2.23-1.68-4.25 0-2.02 1.06-3.02 1.44-3.43.38-.41.82-.51 1.09-.51.27 0 .55 0 .79.01.25.01.6-.1.93.71.34.82 1.16 2.84 1.27 3.04.1.2.17.43.03.7-.14.27-.21.44-.41.68-.21.24-.44.53-.63.71-.21.21-.42.43-.18.85.24.41 1.06 1.74 2.28 2.82 1.57 1.4 2.89 1.83 3.31 2.04.41.21.65.17.89-.1.24-.27 1.02-1.19 1.29-1.6.27-.41.54-.34.89-.2.35.14 2.23 1.05 2.61 1.24.38.19.63.28.73.44.1.17.1.96-.24 1.92z"
-        />
+      <rect width="24" height="24" rx="5.5" fill="#25D366" />
+      <g transform="translate(1.5 1.5)">
+        <path d={GLYPH_PATH} fill="#FFFFFF" />
       </g>
     </svg>
   );
