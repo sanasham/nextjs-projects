@@ -21,6 +21,7 @@ export interface Route {
     | "about"
     | "contact"
     | "admin"
+    | "recipes"
     | "confirmation";
   params: Record<string, string>;
 }
@@ -63,6 +64,8 @@ function parseHash(hash: string): Route {
       return { name: "contact", params };
     case "admin":
       return { name: "admin", params };
+    case "recipes":
+      return { name: "recipes", params };
     case "confirmation":
       return {
         name: "confirmation",
@@ -89,6 +92,8 @@ export function routeToHash(route: Partial<Route>): string {
       return "#/contact";
     case "admin":
       return "#/admin";
+    case "recipes":
+      return "#/recipes";
     case "confirmation":
       return `#/confirmation?orderNo=${route.params?.orderNo ?? ""}`;
     default:

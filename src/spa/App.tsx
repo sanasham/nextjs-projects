@@ -15,6 +15,7 @@ import { ConfirmationView } from "@/spa/features/checkout/ConfirmationView";
 import { AboutView } from "@/spa/features/about/AboutView";
 import { ContactView } from "@/spa/features/contact/ContactView";
 import { AdminView } from "@/spa/features/admin/AdminView";
+import { RecipesView } from "@/spa/features/recipes/RecipesView";
 
 function RouteOutlet() {
   const { route } = useRouter();
@@ -35,6 +36,8 @@ function RouteOutlet() {
       return <ContactView />;
     case "admin":
       return <AdminView />;
+    case "recipes":
+      return <RecipesView />;
     default:
       return <HomeView />;
   }

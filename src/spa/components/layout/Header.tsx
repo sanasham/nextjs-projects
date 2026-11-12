@@ -52,6 +52,7 @@ export function Header() {
   const navLinks = [
     { label: t("nav.home"), to: routeToHash({ name: "home" }), name: "home" },
     { label: t("nav.products"), to: routeToHash({ name: "catalog" }), name: "catalog" },
+    { label: t("nav.recipes"), to: routeToHash({ name: "recipes" }), name: "recipes" },
     { label: t("nav.about"), to: routeToHash({ name: "about" }), name: "about" },
     { label: t("nav.contact"), to: routeToHash({ name: "contact" }), name: "contact" },
   ];

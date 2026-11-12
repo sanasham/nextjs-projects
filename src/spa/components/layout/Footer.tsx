@@ -87,6 +87,7 @@ export function Footer() {
           <ul className="flex flex-col gap-2.5 text-sm text-brand-cream/90">
             <li><Link to={routeToHash({ name: "home" })} className="hover:text-brand-gold">{t("nav.home")}</Link></li>
             <li><Link to={routeToHash({ name: "catalog" })} className="hover:text-brand-gold">{t("nav.products")}</Link></li>
+            <li><Link to={routeToHash({ name: "recipes" })} className="hover:text-brand-gold">{t("nav.recipes")}</Link></li>
             <li><Link to={routeToHash({ name: "about" })} className="hover:text-brand-gold">{t("nav.about")}</Link></li>
             <li><Link to={routeToHash({ name: "contact" })} className="hover:text-brand-gold">{t("nav.contact")}</Link></li>
             <li><Link to={routeToHash({ name: "admin" })} className="hover:text-brand-gold">{t("nav.admin")}</Link></li>
