@@ -28,6 +28,7 @@ export function HomeView() {
   const { t, locale } = useI18n();
   const bestsellers = getBestsellers();
   const snacks = getProductsByCategory("snacks");
+  const sweets = getProductsByCategory("sweets");
   const spicePowders = getProductsByCategory("spices");
   const newArrivals = getNewArrivals();
 
@@ -247,6 +248,24 @@ export function HomeView() {
           ))}
         </div>
       </section>
+
+      {/* FESTIVE SWEETS */}
+      {sweets.length > 0 && (
+        <section className="bg-brand-cream/40 py-14">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <SectionHeading
+              eyebrow={locale === "te" ? "ఇంటి వంటకం" : "Homemade & preservative-free"}
+              title={t("section.sweets.title")}
+              align="left"
+            />
+            <div className="mt-8 grid grid-cols-2 gap-4 sm:gap-5 md:grid-cols-3 lg:grid-cols-4">
+              {sweets.slice(0, 4).map((p) => (
+                <ProductCard key={p.id} product={p} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* PROMO BANNER */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

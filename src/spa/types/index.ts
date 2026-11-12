@@ -3,7 +3,8 @@ export type Locale = "en" | "te";
 export type CategoryId =
   | "pickles"
   | "snacks"
-  | "spices";
+  | "spices"
+  | "sweets";
 
 export interface Category {
   id: CategoryId;

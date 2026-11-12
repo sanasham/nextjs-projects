@@ -28,6 +28,15 @@ export const categories: Category[] = [
     taglineTe: "రుచికరమైన తాజా వంటకాలు",
     image: "/products/cat-snacks.png",
   },
+  {
+    id: "sweets",
+    slug: "sweets",
+    nameEn: "Festive Sweets",
+    nameTe: "పండుగ మిఠాయిలు",
+    taglineEn: "Jaggery & nut-based homemade treats",
+    taglineTe: "బెల్లం, పప్పులతో చేసిన ఇంటి మిఠాయిలు",
+    image: "/products/cat-sweets.png",
+  },
 ];
 
 export const getCategoryById = (id: string): Category | undefined =>

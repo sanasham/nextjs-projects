@@ -31,6 +31,15 @@ function snackVariants(pricePerKg: number) {
   ];
 }
 
+function sweetVariants(pricePerKg: number) {
+  const r10 = (n: number) => Math.round(n / 10) * 10;
+  return [
+    { id: "v-250", label: "250 g", grams: 250, price: r10(pricePerKg / 4), mrp: r10((pricePerKg / 4) * 1.2) },
+    { id: "v-500", label: "500 g", grams: 500, price: r10(pricePerKg / 2), mrp: r10((pricePerKg / 2) * 1.2) },
+    { id: "v-1000", label: "1 kg", grams: 1000, price: pricePerKg, mrp: r10(pricePerKg * 1.2) },
+  ];
+}
+
 const VEG_INGREDIENTS_EN = ["Mustard seeds", "Fenugreek", "Red chilli powder", "Groundnut oil", "Salt", "Turmeric", "Garlic"];
 const VEG_INGREDIENTS_TE = ["ఆవాలు", "మెంతులు", "ఎర్ర మిరప పొడి", "నూనె", "ఉప్పు", "పసుపు", "వెల్లుల్లి"];
 const NONVEG_INGREDIENTS_EN = ["Mustard seeds", "Red chilli powder", "Garam masala", "Ginger-garlic", "Groundnut oil", "Salt", "Tamarind"];
@@ -44,6 +53,8 @@ const SHELF_3M_EN = "Best before 3 months from packing. Refrigerate after openin
 const SHELF_3M_TE = "ప్యాకింగ్ నుండి 3 నెలలు. తెరిచాక ఫ్రిజ్‌లో ఉంచండి.";
 const SHELF_2M_EN = "Best before 2 months from packing.";
 const SHELF_2M_TE = "ప్యాకింగ్ నుండి 2 నెలలు.";
+const SHELF_1M_EN = "Best before 1 month from packing. Refrigerate in humid weather.";
+const SHELF_1M_TE = "ప్యాకింగ్ నుండి 1 నెల. తేమలో ఫ్రిజ్‌లో ఉంచండి.";
 const STORE_EN = "Store in a clean, dry, airtight container. Use a dry spoon.";
 const STORE_TE = "శుభ్రమైన పొడి డబ్బాలో నిల్వ ఉంచండి.";
 const STORE_DRY_EN = "Store in an airtight container away from moisture.";
@@ -682,11 +693,11 @@ export const products: Product[] = [
     nameEn: "Curry Leaf Powder",
     nameTe: "కరివేపాకు పొడి",
     descEn:
-      "Roasted curry leaves ground with red chilli, dal and tamarind. Mix with hot rice and ghee for an iron-rich, flavourful meal.",
-    descTe: "కరివేపాకు, ఎర్ర మిరప, పప్పు, చింతపండుతో చేసిన పొడి.",
+      "Roasted curry leaves ground with red chilli, dal and tamarind. Rich in antioxidants, fibre and iron — a superfood podi that regulates blood sugar and pairs beautifully with hot rice and ghee.",
+    descTe: "కరివేపాకు, ఎర్ర మిరప, పప్పు, చింతపండుతో చేసిన పొడి. యాంటీఆక్సిడెంట్లు, ఫైబర్, ఐరన్ పుష్కలం.",
     categoryId: "spices",
-    image: "/products/curry-leaf-powder.png",
-    gallery: ["/products/curry-leaf-powder.png"],
+    image: "/products/curry-leaf-powder-real.png",
+    gallery: ["/products/curry-leaf-powder-real.png", "/products/curry-leaf-powder-real-2.png"],
     variants: powderVariants(650),
     defaultVariantId: "v-500",
     ingredientsEn: ["Curry leaves", "Red chillies", "Toor dal", "Tamarind", "Cumin", "Salt"],
@@ -1041,6 +1052,64 @@ export const products: Product[] = [
     isNew: true,
     rating: 4.6,
     reviewCount: 38,
+  },
+  {
+    id: "p-karapusa",
+    slug: "karapusa",
+    nameEn: "Karapusa (Sev)",
+    nameTe: "కారపుస",
+    descEn:
+      "Thin, delicate gram-flour sev (karapusa) fried fresh to a golden crisp and finished with curry leaves and a hint of salt-chilli. The classic Andhra tea-time crunch that melts in the mouth.",
+    descTe: "శనగపిండితో చేసిన సన్నని కారపుస — కరకరని, తాజా వేయించిన స్నాక్. టీతో చక్కగా ఉంటుంది.",
+    categoryId: "snacks",
+    image: "/products/karapusa.png",
+    gallery: ["/products/karapusa.png", "/products/karapusa-2.png", "/products/cat-snacks.png"],
+    variants: snackVariants(449),
+    defaultVariantId: "v-400",
+    ingredientsEn: ["Gram flour", "Rice flour", "Curry leaves", "Red chilli powder", "Salt", "Groundnut oil", "Asafoetida"],
+    ingredientsTe: ["శనగపిండి", "బియ్యం పిండి", "కరివేపాకు", "ఎర్ర మిరప పొడి", "ఉప్పు", "నూనె", "ఇంగువ"],
+    allergenEn: "Contains gram flour (legume). Fried in groundnut oil (peanut).",
+    allergenTe: "శనగపిండి ఉంది. నూనె (వేరుశనగ)లో వేయించాము.",
+    shelfLifeEn: SHELF_2M_EN,
+    shelfLifeTe: SHELF_2M_TE,
+    storageEn: STORE_DRY_EN,
+    storageTe: STORE_DRY_TE,
+    inStock: true,
+    stockQty: 30,
+    bestseller: false,
+    isNew: true,
+    rating: 4.5,
+    reviewCount: 26,
+  },
+
+  // ── SWEETS ───────────────────────────────────────────────────
+  {
+    id: "p-palli-bellam-undalu",
+    slug: "palli-bellam-undalu",
+    nameEn: "Palli Bellam Undalu (Peanut Jaggery Balls)",
+    nameTe: "పల్లీ బెల్లం ఉండలు",
+    descEn:
+      "Hand-rolled balls of roasted peanuts bound in golden jaggery syrup — a wholesome, protein-rich festive sweet with no refined sugar. Earthy, crunchy and naturally sweet, just the way Telugu homes make them for Sankranti.",
+    descTe: "వేయించిన వేరుశనగ, బెల్లం పాకతో చేసిన ఉండలు — శుద్ధి చేసిన చక్కెర లేని పండుగ మిఠాయి. సంక్రాంతికి ఇంట్లో చేసే రుచి.",
+    categoryId: "sweets",
+    image: "/products/palli-bellam-undalu.png",
+    gallery: ["/products/palli-bellam-undalu.png", "/products/palli-bellam-undalu-2.png", "/products/cat-sweets.png"],
+    variants: sweetVariants(549),
+    defaultVariantId: "v-500",
+    ingredientsEn: ["Roasted peanuts", "Jaggery", "Cardamom", "Ghee"],
+    ingredientsTe: ["వేయించిన వేరుశనగ", "బెల్లం", "యాలకులు", "నెయ్యి"],
+    allergenEn: "Contains peanut. May contain traces of sesame.",
+    allergenTe: "వేరుశనగ ఉంది. నువ్వులు కలిగి ఉండవచ్చు.",
+    shelfLifeEn: SHELF_1M_EN,
+    shelfLifeTe: SHELF_1M_TE,
+    storageEn: "Store in an airtight container. Refrigerate in humid weather.",
+    storageTe: "గాలి చేరని డబ్బాలో ఉంచండి. తేమలో ఫ్రిజ్‌లో ఉంచండి.",
+    inStock: true,
+    stockQty: 18,
+    bestseller: false,
+    isNew: true,
+    rating: 4.7,
+    reviewCount: 22,
   },
 ];
 
