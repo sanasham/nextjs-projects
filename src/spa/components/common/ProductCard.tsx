@@ -27,6 +27,12 @@ export function ProductCard({ product, className }: ProductCardProps) {
   const name = locale === "te" ? product.nameTe : product.nameEn;
   const lowStock = product.inStock && product.stockQty <= 10;
 
+  // Per-kg rate shown on the card (matches the client's per-kg price list).
+  const kgVariant = product.variants.find((v) => v.grams === 1000);
+  const perKgPrice = kgVariant
+    ? kgVariant.price
+    : Math.round((variant.price / variant.grams) * 1000);
+
   const handleAdd = () => {
     add(product.id, product.defaultVariantId, 1);
     setAdded(true);
@@ -103,16 +109,15 @@ export function ProductCard({ product, className }: ProductCardProps) {
           <div className="flex flex-col">
             <div className="flex items-baseline gap-2">
               <span className="text-lg font-semibold text-brand-green">
-                {formatPrice(variant.price)}
+                {formatPrice(perKgPrice)}
+                <span className="text-xs font-medium">/kg</span>
               </span>
-              {discount > 0 ? (
-                <span className="text-xs text-muted-foreground line-through">
-                  {formatPrice(variant.mrp)}
-                </span>
-              ) : null}
             </div>
             <span className="text-[11px] text-muted-foreground">
-              {variant.label}
+              {variant.label} — {formatPrice(variant.price)}
+              {discount > 0 ? (
+                <span className="ml-1 line-through">{formatPrice(variant.mrp)}</span>
+              ) : null}
               {lowStock ? (
                 <span className="ml-1 text-brand-terracotta">
                   · {t("common.onlyLeft", { count: product.stockQty })}

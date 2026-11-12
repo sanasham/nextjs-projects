@@ -88,6 +88,11 @@ function ProductDetail({ product }: { product: Product }) {
   const storage = locale === "te" ? product.storageTe : product.storageEn;
   const related = getRelatedProducts(product, 4);
 
+  const kgVariant = product.variants.find((v) => v.grams === 1000);
+  const perKgPrice = kgVariant
+    ? kgVariant.price
+    : Math.round((variant.price / variant.grams) * 1000);
+
   const handleAdd = () => {
     add(product.id, variant.id, quantity);
     setAdded(true);
@@ -191,8 +196,9 @@ function ProductDetail({ product }: { product: Product }) {
             </div>
           </div>
 
-          <div className="flex items-end gap-3">
+          <div className="flex flex-wrap items-end gap-3">
             <span className="text-3xl font-bold text-brand-green">{formatPrice(variant.price)}</span>
+            <span className="pb-1.5 text-sm text-muted-foreground">/ {variant.label}</span>
             {discount > 0 ? (
               <span className="pb-1 text-base text-muted-foreground line-through">
                 {formatPrice(variant.mrp)}
@@ -203,6 +209,9 @@ function ProductDetail({ product }: { product: Product }) {
                 {t("common.off", { pct: discount })}
               </Badge>
             ) : null}
+            <span className="w-full text-sm font-medium text-brand-green/80 sm:w-auto sm:pb-1">
+              {formatPrice(perKgPrice)}/kg
+            </span>
           </div>
 
           <p className="text-sm leading-relaxed text-foreground/80 sm:text-base">{desc}</p>
