@@ -125,6 +125,9 @@ export function Footer() {
               <MapPin className="mt-0.5 size-4 shrink-0 text-brand-gold" />
               <span>{siteConfig.addressLine}</span>
             </li>
+            <li className="flex gap-2 pt-1 text-xs text-brand-cream/70">
+              <span>Prop: {siteConfig.proprietor} · FSSAI: {siteConfig.fssaiRegNo}</span>
+            </li>
           </ul>
         </div>
       </div>

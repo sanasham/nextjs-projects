@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="80" viewBox="0 0 320 80">
+  <rect width="320" height="80" rx="8" fill="#075C43" opacity="0.92"/>
+  <rect x="3" y="3" width="314" height="74" rx="6" fill="none" stroke="#D69B32" stroke-width="1"/>
+  <text x="160" y="36" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="bold" fill="#F6E7B9" letter-spacing="1">Devi Pickles</text>
+  <text x="160" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#D69B32" letter-spacing="1.5">HOMEMADE PICKLES</text>
+</svg>

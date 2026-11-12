@@ -47,7 +47,7 @@ describe("products data — integrity", () => {
 
 describe("products data — accessors", () => {
   it("getProductBySlug returns the matching product", () => {
-    const p = getProductBySlug("andhra-mango-pickle");
+    const p = getProductBySlug("mango-pickle");
     expect(p).toBeDefined();
     expect(p?.nameEn).toContain("Mango");
   });
@@ -85,7 +85,7 @@ describe("products data — accessors", () => {
   });
 
   it("getRelatedProducts excludes the current product and respects the category", () => {
-    const mango = getProductBySlug("andhra-mango-pickle")!;
+    const mango = getProductBySlug("mango-pickle")!;
     const related = getRelatedProducts(mango, 10);
     expect(related.every((r) => r.id !== mango.id)).toBe(true);
     expect(related.every((r) => r.categoryId === mango.categoryId)).toBe(true);

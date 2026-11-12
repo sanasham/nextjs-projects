@@ -1,6 +1,5 @@
 import type { Locale } from "@/spa/types";
 
-/** Flatten dotted keys to a lookup map. */
 type Dict = Record<string, string>;
 
 export const en: Dict = {
@@ -55,7 +54,7 @@ export const en: Dict = {
   // hero
   "hero.badge": "Authentic Andhra • Handmade Daily",
   "hero.title": "Tradition in Every Jar",
-  "hero.subtitle": "Sun-cured pickles, crunchy snacks and festive sweets — crafted with time-honoured Telugu recipes and the finest ingredients.",
+  "hero.subtitle": "Sun-cured pickles, crunchy snacks and festive sweets — made the way Telugu families have cooked for generations.",
   "hero.cta1": "Shop Now",
   "hero.cta2": "Explore Products",
   "hero.stat1": "100% Homemade",
@@ -68,8 +67,9 @@ export const en: Dict = {
   "section.bestsellers.subtitle": "Loved by thousands of families",
   "section.snacks.title": "Traditional Snacks",
   "section.sweets.title": "Festive Sweets",
+  "section.spices.title": "Spice Powders",
   "section.why.title": "Why Families Trust Us",
-  "section.why.subtitle": "Crafted with care, delivered with pride",
+  "section.why.subtitle": "Made in small batches, delivered fresh",
   "section.why.1.title": "Homemade & Authentic",
   "section.why.1.desc": "Prepared in small batches using grandmother's recipes — no shortcuts, no preservatives.",
   "section.why.2.title": "Sun-Cured Tradition",
@@ -279,8 +279,9 @@ export const te: Dict = {
   "section.bestsellers.subtitle": "వేలాది కుటుంబాలు ఇష్టపడతాయి",
   "section.snacks.title": "సంప్రదాయ స్నాక్స్",
   "section.sweets.title": "పండుగ మిఠాయిలు",
+  "section.spices.title": "కారం పొడులు",
   "section.why.title": "కుటుంబాలు ఎందుకు నమ్ముతాయి",
-  "section.why.subtitle": "శ్రద్ధతో తయారు, గర్వంతో పంపిణీ",
+  "section.why.subtitle": "చిన్న మొత్తంలో తయారు, తాజాగా పంపిణీ",
   "section.why.1.title": "ఇంటిలో నిజమైన రుచి",
   "section.why.1.desc": "అమ్మమ్మ వంటకాలతో చిన్న మొత్తంలో తయారు — ప్రిజర్వేటివ్‌లు లేవు.",
   "section.why.2.title": "ఎండలో పులియబెట్టినది",

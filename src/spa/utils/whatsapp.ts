@@ -3,10 +3,6 @@ import type { Product, WeightVariant } from "@/spa/types";
 import type { CartLine } from "./cart";
 import { formatPrice, getCartSubtotal, getShipping } from "./cart";
 
-/**
- * Build a prefilled WhatsApp enquiry message for the whole cart.
- * NOTE: Opening WhatsApp only pre-fills a message — it does NOT confirm an order.
- */
 export function buildCartWhatsappMessage(
   lines: CartLine[],
   locale: "en" | "te"
@@ -46,7 +42,6 @@ export function buildCartWhatsappMessage(
   return `${header}\n\n${itemRows}${summary}`;
 }
 
-/** Build a WhatsApp enquiry message for a single product. */
 export function buildProductWhatsappMessage(
   product: Product,
   variant: WeightVariant,
@@ -63,7 +58,6 @@ export function buildProductWhatsappMessage(
   )}`;
 }
 
-/** Open WhatsApp with a prefilled message. */
 export function openWhatsapp(message: string): void {
   const url = `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(
     message

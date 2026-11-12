@@ -7,7 +7,7 @@ import { getCartLines } from "@/spa/utils/cart";
 import { getProductById, products } from "@/spa/data/products";
 import type { CartItem } from "@/spa/types";
 
-const mango = products.find((p) => p.slug === "andhra-mango-pickle")!;
+const mango = products.find((p) => p.slug === "mango-pickle")!;
 const variant = mango.variants.find((v) => v.id === mango.defaultVariantId)!;
 
 describe("whatsapp — buildProductWhatsappMessage", () => {

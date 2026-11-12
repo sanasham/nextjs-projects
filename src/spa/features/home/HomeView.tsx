@@ -28,7 +28,7 @@ export function HomeView() {
   const { t, locale } = useI18n();
   const bestsellers = getBestsellers();
   const snacks = getProductsByCategory("snacks");
-  const sweets = getProductsByCategory("sweets");
+  const spicePowders = getProductsByCategory("spices");
   const newArrivals = getNewArrivals();
 
   const why = [
@@ -268,14 +268,14 @@ export function HomeView() {
         </div>
       </section>
 
-      {/* SWEETS + NEW ARRIVALS */}
+      {/* SPICE POWDERS + NEW ARRIVALS */}
       <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow={locale === "te" ? "కొత్త వచ్చినవి" : "Fresh arrivals"}
-          title={t("section.sweets.title")}
+          eyebrow={locale === "te" ? "రోలుతో నూరినవి" : "Stone-ground"}
+          title={t("section.spices.title")}
         />
         <div className="mt-8 grid grid-cols-2 gap-4 sm:gap-5 md:grid-cols-3 lg:grid-cols-4">
-          {[...sweets, ...newArrivals.filter((p) => !sweets.includes(p))]
+          {[...spicePowders, ...newArrivals.filter((p) => !spicePowders.includes(p))]
             .slice(0, 4)
             .map((p) => (
               <ProductCard key={p.id} product={p} />

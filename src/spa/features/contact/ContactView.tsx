@@ -15,6 +15,8 @@ import {
   Clock,
   Send,
   CheckCircle2,
+  User,
+  ShieldCheck,
 } from "lucide-react";
 import { WhatsAppIcon } from "@/spa/components/common/WhatsAppIcon";
 
@@ -31,10 +33,12 @@ export function ContactView() {
   };
 
   const info = [
+    { icon: User, label: "Proprietor", value: siteConfig.proprietor },
     { icon: Phone, label: t("contact.phone"), value: siteConfig.contactPhone },
     { icon: Mail, label: t("contact.emailLabel"), value: siteConfig.contactEmail },
     { icon: MapPin, label: t("contact.addressLabel"), value: siteConfig.addressLine },
     { icon: Clock, label: t("contact.hours"), value: siteConfig.businessHours },
+    { icon: ShieldCheck, label: "FSSAI Reg. No.", value: siteConfig.fssaiRegNo },
   ];
 
   const waUrl = `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(

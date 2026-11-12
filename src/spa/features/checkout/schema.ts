@@ -1,9 +1,5 @@
 import { z } from "zod";
 
-/**
- * Checkout form validation schema (shared so it can be unit-tested and reused).
- * Demonstrates the demo checkout's client-side validation rules.
- */
 export const checkoutSchema = z.object({
   name: z.string().min(3),
   mobile: z.string().regex(/^[6-9]\d{9}$/),
@@ -18,7 +14,6 @@ export const checkoutSchema = z.object({
 
 export type CheckoutFormValues = z.infer<typeof checkoutSchema>;
 
-/** A fully valid sample form used as the baseline in tests. */
 export const validCheckout: CheckoutFormValues = {
   name: "Test User",
   mobile: "9876543210",

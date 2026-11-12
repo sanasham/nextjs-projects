@@ -31,7 +31,7 @@ describe("cart utils — getVariant", () => {
     const v = getVariant(mango, "v-250");
     expect(v).toBeDefined();
     expect(v?.label).toBe("250 g");
-    expect(v?.price).toBe(199);
+    expect(v?.price).toBe(210);
   });
 
   it("falls back to the default variant when id is unknown", () => {
@@ -70,7 +70,7 @@ describe("cart utils — getCartLines", () => {
     expect(lines).toHaveLength(1);
     expect(lines[0].product.id).toBe(mango.id);
     expect(lines[0].variant.label).toBe("500 g");
-    expect(lines[0].lineTotal).toBe(349 * 2); // 698
+    expect(lines[0].lineTotal).toBe(430 * 2); // 860
   });
 
   it("skips items whose product no longer exists", () => {
@@ -87,11 +87,11 @@ describe("cart utils — getCartLines", () => {
 describe("cart utils — getCartSubtotal", () => {
   it("sums the line totals", () => {
     const items: CartItem[] = [
-      { productId: mango.id, variantId: "v-500", quantity: 2 }, // 698
+      { productId: mango.id, variantId: "v-500", quantity: 2 }, // 860
       { productId: mango.id, variantId: "v-250", quantity: 1 }, // 199
     ];
     const lines = getCartLines(items, getProductById);
-    expect(getCartSubtotal(lines)).toBe(698 + 199);
+    expect(getCartSubtotal(lines)).toBe(860 + 210);
   });
 
   it("returns 0 for an empty cart", () => {

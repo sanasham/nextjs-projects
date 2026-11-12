@@ -1,34 +1,32 @@
-/**
- * Centralized site configuration.
- * Replace placeholder values with real client information after approval.
- */
 export const siteConfig = {
   brandName: "Devi Pickles",
   brandNameTe: "దేవి పికల్స్",
-  brandTagline: "Every Product A1",
-  brandTaglineTe: "ప్రతి ప్రొడక్ట్ A1",
+  brandTagline: "Homemade Pickles",
+  brandTaglineTe: "ఇంటిలో తయారు చేసిన ఊరగాయలు",
 
-  /** WhatsApp business number — sourced from client brand poster. */
+  proprietor: "Beena Devi",
+  fssaiRegNo: "23625032001013",
+
   whatsappNumber: "917989225946",
-  contactEmail: "hello@devipickles.com", // placeholder
+  contactEmail: "hello@devipickles.com",
   contactPhone: "+91 79892 25946",
-  businessHours: "Mon – Sat, 9:00 AM – 7:00 PM", // placeholder
-  addressLine: "Patelguda, Hyderabad, Telangana 502319",
-  // Exact business location (decoded from the client's Google Maps plus code G7RM+432).
-  mapLat: 17.5402625,
-  mapLng: 78.2826406,
-  // Google Maps embed query — sourced from the client's Maps link.
-  mapEmbedQuery: "Patelguda, Hyderabad, Telangana 502319",
-  mapLink: "https://maps.app.goo.gl/sKYTuFhqvK9CKYsN8?g_st=aw",
+  businessHours: "Mon – Sat, 9:00 AM – 7:00 PM",
+  addressLine:
+    "MIG-899/6B, Beside Old Post Office, C/o. Sairam Computer Services & MeeSeva Center, KPHB Colony, 3rd Phase, Kukatpally, Telangana - 500072",
+  addressShort: "KPHB Colony, 3rd Phase, Kukatpally, Telangana - 500072",
+  mapLat: 17.48710453,
+  mapLng: 78.39571101,
+  mapEmbedQuery: "Sairam Computer Services, KPHB Colony, Hyderabad",
+  mapLink:
+    "https://maps.google.com/maps/search/MeeSeva%20%2C%20CSC%20Center%20%26%20Sairam%20Computer%20Services/@17.48710453,78.39571101,17z?hl=en",
 
   currency: "INR",
   currencySymbol: "₹",
   locale: "en" as "en" | "te",
 
-  /** Free shipping threshold (INR). Sample value only. */
   freeShippingThreshold: 999,
   flatShippingFee: 79,
-  estDeliveryDays: "3 – 6 business days", // sample
+  estDeliveryDays: "3 – 6 business days",
 
   social: {
     instagram: "#",

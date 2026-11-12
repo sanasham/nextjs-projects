@@ -4,7 +4,6 @@ import { siteConfig } from "@/spa/config/site";
 import { useI18n } from "@/spa/i18n";
 import { WhatsAppIcon } from "@/spa/components/common/WhatsAppIcon";
 
-/** Persistent floating WhatsApp enquiry button. */
 export function WhatsAppFab() {
   const { t, locale } = useI18n();
   const msg =

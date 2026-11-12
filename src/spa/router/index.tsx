@@ -11,7 +11,6 @@ import {
   type MouseEvent,
 } from "react";
 
-/** Route shape: { name, params } */
 export interface Route {
   name:
     | "home"
@@ -152,7 +151,6 @@ interface LinkProps {
   title?: string;
 }
 
-/** Hash-based link that integrates with our SPA router. */
 export function Link({ to, children, className, onClick, ariaLabel, title }: LinkProps) {
   const { navigate } = useRouter();
   const href = to.startsWith("#") ? to : `#${to}`;
