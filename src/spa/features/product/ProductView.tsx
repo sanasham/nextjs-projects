@@ -134,23 +134,24 @@ function ProductDetail({ product }: { product: Product }) {
               priority
               fetchPriorityHigh
             />
-            {/* Gradient scrim so badges stay readable over any image */}
-            <div
-              className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black/50 to-transparent"
-              aria-hidden
-            />
-            <div className="absolute left-3 top-3 flex flex-col gap-1.5">
-              {product.bestseller ? (
-                <Badge className="bg-brand-gold text-white shadow-md drop-shadow-md">{t("common.bestSeller")}</Badge>
-              ) : null}
-              {product.isNew ? (
-                <Badge className="bg-brand-terracotta text-white shadow-md drop-shadow-md">{t("common.new")}</Badge>
-              ) : null}
-            </div>
+            {/* Badge clusters on solid dark pill backdrops — no collision with
+                text baked into the product image. */}
+            {(product.bestseller || product.isNew) && (
+              <div className="absolute left-3 top-3 flex flex-col gap-1.5 rounded-lg bg-black/70 px-2 py-1.5 backdrop-blur-sm">
+                {product.bestseller ? (
+                  <Badge className="border-0 bg-brand-gold text-white shadow-sm">{t("common.bestSeller")}</Badge>
+                ) : null}
+                {product.isNew ? (
+                  <Badge className="border-0 bg-brand-terracotta text-white shadow-sm">{t("common.new")}</Badge>
+                ) : null}
+              </div>
+            )}
             {discount > 0 ? (
-              <Badge className="absolute right-3 top-3 bg-brand-green text-white shadow-md drop-shadow-md">
-                {t("common.off", { pct: discount })}
-              </Badge>
+              <div className="absolute right-3 top-3 rounded-lg bg-black/70 px-2 py-1.5 backdrop-blur-sm">
+                <Badge className="border-0 bg-brand-green text-white shadow-sm">
+                  {t("common.off", { pct: discount })}
+                </Badge>
+              </div>
             ) : null}
           </div>
           {product.gallery.length > 1 ? (
