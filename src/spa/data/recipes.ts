@@ -118,8 +118,8 @@ const STEP_TEMPLATES: Record<CategoryId, { en: string[]; te: string[] }> = {
 export const recipeVideos: RecipeVideo[] = products.map((p: Product, i) => ({
   id: `rv-${p.slug}`,
   productSlug: p.slug,
-  titleEn: `How to Make ${p.nameEn}`,
-  titleTe: `${p.nameTe} ఎలా చేయాలి`,
+  titleEn: `How do we make ${p.nameEn}?`,
+  titleTe: `${p.nameTe} ఎలా చేస్తాము?`,
   descEn: `Step-by-step video guide to making ${p.nameEn} at home — the traditional Andhra way.`,
   descTe: `${p.nameTe} ఇంట్లో చేయడానికి దశల వారీ వీడియో గైడ్ — సంప్రదాయ ఆంధ్ర పద్ధతి.`,
   categoryId: p.categoryId,
