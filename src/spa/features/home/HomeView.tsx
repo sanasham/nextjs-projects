@@ -202,6 +202,23 @@ export function HomeView() {
             </div>
           ))}
         </div>
+
+        {/* FSSAI trust strip */}
+        <div className="mt-6 flex items-center justify-center gap-4 rounded-2xl border border-brand-green/20 bg-brand-cream/40 px-6 py-4">
+          <img
+            src="/fssai-logo.svg"
+            alt="FSSAI Certified"
+            className="h-14 w-auto shrink-0"
+          />
+          <div className="text-sm">
+            <p className="font-semibold text-brand-green">
+              {locale === "te" ? "FSSAI ధృవీకృతం" : "FSSAI Certified"}
+            </p>
+            <p className="text-xs text-muted-foreground">
+              {locale === "te" ? "రెజి. నం" : "Reg. No."}: {siteConfig.fssaiRegNo} · {locale === "te" ? "14-02-2027 వరకు" : "Valid until 14-02-2027"}
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* STORY */}

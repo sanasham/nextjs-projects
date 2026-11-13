@@ -299,9 +299,9 @@ function ProductDetail({ product }: { product: Product }) {
           {/* FSSAI trust badge */}
           <div className="flex items-center gap-3 rounded-xl border border-brand-green/20 bg-brand-cream/40 p-3">
             <img
-              src="/fssai-logo.png"
+              src="/fssai-logo.svg"
               alt="FSSAI Certified"
-              className="h-10 w-auto shrink-0 rounded bg-white p-1"
+              className="h-12 w-auto shrink-0"
             />
             <div className="text-xs">
               <p className="font-semibold text-brand-green">

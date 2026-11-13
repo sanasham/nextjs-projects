@@ -91,9 +91,9 @@ export function AboutView() {
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center gap-6 rounded-3xl border border-brand-green/20 bg-card p-8 text-center shadow-sm sm:flex-row sm:text-left">
             <img
-              src="/fssai-logo.png"
+              src="/fssai-logo.svg"
               alt="FSSAI Certified"
-              className="h-20 w-auto shrink-0 rounded-lg bg-white p-2 shadow-sm"
+              className="h-24 w-auto shrink-0"
             />
             <div className="flex flex-col gap-2">
               <h2 className="font-display text-xl font-medium text-brand-green">

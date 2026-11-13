@@ -90,6 +90,23 @@ export function ContactView() {
                 <WhatsAppIcon className="size-5" monochrome />
                 {t("contact.whatsappCta")}
               </a>
+
+              {/* FSSAI badge */}
+              <div className="mt-5 flex items-center gap-3 rounded-xl border border-brand-green/20 bg-brand-cream/40 p-3">
+                <img
+                  src="/fssai-logo.svg"
+                  alt="FSSAI Certified"
+                  className="h-12 w-auto shrink-0"
+                />
+                <div className="text-xs">
+                  <p className="font-semibold text-brand-green">
+                    {locale === "te" ? "FSSAI ధృవీకృతం" : "FSSAI Certified"}
+                  </p>
+                  <p className="text-muted-foreground">
+                    {locale === "te" ? "రెజి. నం" : "Reg. No."}: {siteConfig.fssaiRegNo}
+                  </p>
+                </div>
+              </div>
             </div>
 
             {/* Embedded Google Map */}

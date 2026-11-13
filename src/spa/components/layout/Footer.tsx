@@ -137,9 +137,9 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl items-center justify-center gap-4 px-4 py-6 sm:px-6 lg:px-8">
           <img
-            src="/fssai-logo.png"
+            src="/fssai-logo.svg"
             alt="FSSAI Certified"
-            className="h-14 w-auto shrink-0 rounded bg-white/95 p-1.5"
+            className="h-16 w-auto shrink-0"
           />
           <div className="text-left">
             <p className="text-sm font-semibold text-brand-cream">
