@@ -13,6 +13,7 @@ import {
   ArrowRight,
   Quote,
 } from "lucide-react";
+import { siteConfig } from "@/spa/config/site";
 
 export function AboutView() {
   const { t, locale } = useI18n();
@@ -81,6 +82,34 @@ export function AboutView() {
                 <p className="text-sm text-muted-foreground">{v.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FSSAI Certification */}
+      <section className="bg-muted/30 py-14">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center gap-6 rounded-3xl border border-brand-green/20 bg-card p-8 text-center shadow-sm sm:flex-row sm:text-left">
+            <img
+              src="/fssai-logo.png"
+              alt="FSSAI Certified"
+              className="h-20 w-auto shrink-0 rounded-lg bg-white p-2 shadow-sm"
+            />
+            <div className="flex flex-col gap-2">
+              <h2 className="font-display text-xl font-medium text-brand-green">
+                {locale === "te" ? "FSSAI ధృవీకృతం" : "FSSAI Certified"}
+              </h2>
+              <p className="text-sm text-muted-foreground">
+                {locale === "te"
+                  ? "మేము ఫుడ్ సేఫ్టీ అండ్ స్టాండర్డ్స్ అథారిటీ ఆఫ్ ఇండియా ద్వారా నమోదు చేయబడ్డాము. మా ఊరగాయలు, స్నాక్స్, మిఠాయిలు పూర్తి సురక్షిత ప్రమాణాలతో తయారు."
+                  : "We are registered with the Food Safety and Standards Authority of India. Our pickles, snacks and sweets are made following all safety standards."}
+              </p>
+              <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-muted-foreground">
+                <span><strong className="text-brand-ink">{locale === "te" ? "రెజి. నం" : "Reg. No."}:</strong> {siteConfig.fssaiRegNo}</span>
+                <span><strong className="text-brand-ink">{locale === "te" ? "చెల్లుబాటు" : "Valid"}:</strong> 14-02-2027</span>
+                <span><strong className="text-brand-ink">FBO:</strong> {siteConfig.proprietor}</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>

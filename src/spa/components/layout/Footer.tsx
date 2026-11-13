@@ -127,9 +127,31 @@ export function Footer() {
               <span>{siteConfig.addressLine}</span>
             </li>
             <li className="flex gap-2 pt-1 text-xs text-brand-cream/70">
-              <span>Prop: {siteConfig.proprietor} · FSSAI: {siteConfig.fssaiRegNo}</span>
+              <span>Prop: {siteConfig.proprietor}</span>
             </li>
           </ul>
+        </div>
+      </div>
+
+      {/* FSSAI Certification badge */}
+      <div className="border-t border-white/10">
+        <div className="mx-auto flex max-w-7xl items-center justify-center gap-4 px-4 py-6 sm:px-6 lg:px-8">
+          <img
+            src="/fssai-logo.png"
+            alt="FSSAI Certified"
+            className="h-14 w-auto shrink-0 rounded bg-white/95 p-1.5"
+          />
+          <div className="text-left">
+            <p className="text-sm font-semibold text-brand-cream">
+              {locale === "te" ? "FSSAI ధృవీకృతం" : "FSSAI Certified"}
+            </p>
+            <p className="text-xs text-brand-cream/70">
+              {locale === "te" ? "రెజి. నం" : "Reg. No."}: {siteConfig.fssaiRegNo}
+            </p>
+            <p className="text-[10px] text-brand-cream/50">
+              {locale === "te" ? "14-02-2027 వరకు చెల్లుతుంది" : "Valid until 14-02-2027"}
+            </p>
+          </div>
         </div>
       </div>
 

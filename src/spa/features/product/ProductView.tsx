@@ -296,6 +296,23 @@ function ProductDetail({ product }: { product: Product }) {
             </div>
           </div>
 
+          {/* FSSAI trust badge */}
+          <div className="flex items-center gap-3 rounded-xl border border-brand-green/20 bg-brand-cream/40 p-3">
+            <img
+              src="/fssai-logo.png"
+              alt="FSSAI Certified"
+              className="h-10 w-auto shrink-0 rounded bg-white p-1"
+            />
+            <div className="text-xs">
+              <p className="font-semibold text-brand-green">
+                {locale === "te" ? "FSSAI ధృవీకృత ఆహారం" : "FSSAI Certified Food"}
+              </p>
+              <p className="text-muted-foreground">
+                {locale === "te" ? "రెజి. నం" : "Reg. No."}: {siteConfig.fssaiRegNo}
+              </p>
+            </div>
+          </div>
+
           {/* Tabs */}
           <Tabs defaultValue="details" className="mt-2">
             <TabsList className="w-full justify-start gap-1 bg-muted/40">
