@@ -4,7 +4,7 @@ type Dict = Record<string, string>;
 
 export const en: Dict = {
   // announcement
-  "announcement": "Free delivery on orders over ₹999 • Handmade in Andhra • Pan-India shipping",
+  "announcement": "Free delivery on orders over ₹999 • Handmade in Andhra • Pan-India & International shipping",
   // nav
   "nav.home": "Home",
   "nav.shop": "Shop",
@@ -60,7 +60,7 @@ export const en: Dict = {
   "hero.cta2": "Explore Products",
   "hero.stat1": "100% Homemade",
   "hero.stat2": "No Preservatives",
-  "hero.stat3": "Pan-India Delivery",
+  "hero.stat3": "Pan-India & International Delivery",
   // sections
   "section.categories.title": "Shop by Category",
   "section.categories.subtitle": "Explore our handcrafted range",
@@ -75,8 +75,8 @@ export const en: Dict = {
   "section.why.1.desc": "Prepared in small batches using grandmother's recipes — no shortcuts, no preservatives.",
   "section.why.2.title": "Sun-Cured Tradition",
   "section.why.2.desc": "Pickles are matured under the Andhra sun for that deep, true flavour.",
-  "section.why.3.title": "Pan-India Delivery",
-  "section.why.3.desc": "Carefully packed and shipped fresh to your doorstep across India.",
+  "section.why.3.title": "Worldwide Delivery",
+  "section.why.3.desc": "Carefully packed and shipped fresh across India and overseas. International orders via WhatsApp.",
   "section.why.4.title": "Quality You Can Taste",
   "section.why.4.desc": "Only the finest ingredients — cold-pressed oils, sun-dried spices, fresh produce.",
   "section.story.title": "From Our Kitchen to Yours",
@@ -237,7 +237,7 @@ export const en: Dict = {
 };
 
 export const te: Dict = {
-  "announcement": "₹999 పైన ఆర్డర్‌లకు ఉచిత డెలివరీ • ఆంధ్రలో చేతితో తయారు • దేశవ్యాప్త షిప్పింగ్",
+  "announcement": "₹999 పైన ఆర్డర్‌లకు ఉచిత డెలివరీ • ఆంధ్రలో చేతితో తయారు • దేశవ్యాప్త & అంతర్జాతీయ షిప్పింగ్",
   "nav.home": "హోమ్",
   "nav.shop": "షాప్",
   "nav.products": "అన్ని ఉత్పత్తులు",
@@ -290,7 +290,7 @@ export const te: Dict = {
   "hero.cta2": "ఉత్పత్తులను చూడండి",
   "hero.stat1": "100% ఇంటిలో చేసినది",
   "hero.stat2": "ప్రిజర్వేటివ్‌లు లేవు",
-  "hero.stat3": "దేశవ్యాప్త డెలివరీ",
+  "hero.stat3": "దేశవ్యాప్త & అంతర్జాతీయ డెలివరీ",
   "section.categories.title": "వర్గాల ప్రకారం",
   "section.categories.subtitle": "మా చేతితో తయారుచేసిన వస్తువులు",
   "section.bestsellers.title": "బెస్ట్ సెల్లర్లు",
@@ -304,8 +304,8 @@ export const te: Dict = {
   "section.why.1.desc": "అమ్మమ్మ వంటకాలతో చిన్న మొత్తంలో తయారు — ప్రిజర్వేటివ్‌లు లేవు.",
   "section.why.2.title": "ఎండలో పులియబెట్టినది",
   "section.why.2.desc": "ఊరగాయలు ఆంధ్ర ఎండలో పక్కా రుచికోసం పులియబెడతాయి.",
-  "section.why.3.title": "దేశవ్యాప్త డెలివరీ",
-  "section.why.3.desc": "జాగ్రత్తగా ప్యాక్ చేసి మీ తలుపు దగ్గర తాజాగా పంపిస్తాము.",
+  "section.why.3.title": "ప్రపంచవ్యాప్త డెలివరీ",
+  "section.why.3.desc": "జాగ్రత్తగా ప్యాక్ చేసి దేశవ్యాప్తంగా, విదేశాలకు తాజాగా పంపిస్తాము. అంతర్జాతీయ ఆర్డర్‌ల కోసం వాట్సాప్.",
   "section.why.4.title": "రుచిలో నాణ్యత",
   "section.why.4.desc": "ఉత్తమ పదార్థాలు మాత్రమే — నూనెలు, సుగంధ ద్రవ్యాలు, తాజా పదార్థాలు.",
   "section.story.title": "మా వంటగది నుండి మీకు",

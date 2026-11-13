@@ -176,6 +176,17 @@ export function CartView() {
                 <span>{t("checkout.eta")}</span>
                 <span>{siteConfig.estDeliveryDays}</span>
               </div>
+              {/* International shipping note */}
+              <div className="rounded-lg border border-brand-green/20 bg-brand-cream/40 p-3 text-xs text-muted-foreground">
+                <p className="font-medium text-brand-green">
+                  {locale === "te" ? "అంతర్జాతీయ డెలివరీ" : "International Delivery"}
+                </p>
+                <p className="mt-0.5">
+                  {locale === "te"
+                    ? "విదేశాలకు ఆర్డర్ చేయాలంటే వాట్సాప్‌లో సంప్రదించండి — షిప్పింగ్ రేటు గమ్యం బట్టి."
+                    : "Ordering overseas? Contact us on WhatsApp for a shipping quote — rates vary by destination."}
+                </p>
+              </div>
               <Separator className="my-2" />
               <div className="flex justify-between text-base font-semibold">
                 <span>{t("common.total")}</span>

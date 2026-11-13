@@ -17,6 +17,7 @@ import {
   CheckCircle2,
   User,
   ShieldCheck,
+  Truck,
 } from "lucide-react";
 import { WhatsAppIcon } from "@/spa/components/common/WhatsAppIcon";
 
@@ -38,6 +39,7 @@ export function ContactView() {
     { icon: Mail, label: t("contact.emailLabel"), value: siteConfig.contactEmail },
     { icon: MapPin, label: t("contact.addressLabel"), value: siteConfig.addressLine },
     { icon: Clock, label: t("contact.hours"), value: siteConfig.businessHours },
+    { icon: Truck, label: locale === "te" ? "డెలివరీ" : "Delivery", value: locale === "te" ? "దేశవ్యాప్త & అంతర్జాతీయ" : "Pan-India & International" },
     { icon: ShieldCheck, label: "FSSAI Reg. No.", value: siteConfig.fssaiRegNo },
   ];
 

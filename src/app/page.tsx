@@ -27,7 +27,7 @@ export default function Home() {
             powders, traditional snacks and festive sweets — made in small
             batches with groundnut oil &amp; organic mirchi powder. No
             preservatives. FSSAI Reg. No: {siteConfig.fssaiRegNo}. Order online
-            with pan-India delivery. Free shipping on orders above ₹999.
+            with pan-India & international delivery. Free shipping on orders above ₹999.
           </p>
 
           {/* ── Categories ─────────────────────────────────────── */}
@@ -96,12 +96,14 @@ export default function Home() {
             gongura chicken, prawns, fish, mutton boneless, mutton with bone).
             Non-veg pickles are made to order with a 2-3 day lead time.
           </p>
-          <h3>Do you deliver across India?</h3>
+          <h3>Do you deliver across India and internationally?</h3>
           <p>
-            Yes, we ship pan-India. Free shipping on orders above ₹999; a flat
-            ₹79 shipping fee applies below that. Estimated delivery is 3-6
-            business days. You can also order via WhatsApp on{" "}
-            {siteConfig.contactPhone}.
+            Yes, we ship pan-India and internationally. Within India, free
+            shipping on orders above ₹999; a flat ₹79 shipping fee applies
+            below that. Estimated delivery is 3-6 business days within India.
+            For international orders, contact us on WhatsApp on{" "}
+            {siteConfig.contactPhone} for a shipping quote — delivery takes
+            7-14 business days overseas.
           </p>
           <h3>What is the FSSAI registration number?</h3>
           <p>
@@ -132,7 +134,7 @@ export default function Home() {
             Business Hours: {siteConfig.businessHours}
           </p>
           <p>
-            Free shipping on orders above ₹999. Pan-India delivery. Order online
+            Free shipping on orders above ₹999. Pan-India & international delivery. Order online
             or via WhatsApp. Search for homemade Andhra pickles, avakaya pickle,
             gongura pickle, chicken pickle, mutton pickle, prawns pickle,
             idli karam powder, sambar powder, murukulu, Andhra mixture, ariselu,

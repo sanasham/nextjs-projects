@@ -24,7 +24,7 @@ export function localBusinessSchema() {
     name: "Devi Pickles",
     alternateName: siteConfig.brandNameTe,
     description:
-      "Homemade Andhra veg & non-veg pickles, spice powders, traditional snacks and festive sweets. Made with groundnut oil & organic mirchi. FSSAI certified. Pan-India delivery.",
+      "Homemade Andhra veg & non-veg pickles, spice powders, traditional snacks and festive sweets. Made with groundnut oil & organic mirchi. FSSAI certified. Pan-India & international delivery.",
     image: `${SITE_URL}/products/hero.png`,
     logo: `${SITE_URL}/favicon.svg`,
     url: SITE_URL,
@@ -207,10 +207,10 @@ export function faqSchema() {
       },
       {
         "@type": "Question",
-        name: "Do you deliver across India?",
+        name: "Do you deliver across India and internationally?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes, we ship pan-India. Free shipping on orders above ₹999; a flat ₹79 shipping fee applies below that. Estimated delivery is 3-6 business days. You can also order via WhatsApp on +91 79892 25946.",
+          text: "Yes, we ship pan-India and internationally. Within India, free shipping on orders above ₹999; a flat ₹79 shipping fee applies below that. Estimated delivery is 3-6 business days within India. For international orders, contact us on WhatsApp (+91 79892 25946) for a shipping quote — delivery takes 7-14 business days overseas.",
         },
       },
       {

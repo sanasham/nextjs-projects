@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s | Devi Pickles",
   },
   description:
-    "Buy homemade Andhra veg & non-veg pickles (avakaya, gongura, chicken, mutton, prawns), spice powders, traditional snacks & festive sweets online. Made with groundnut oil & organic mirchi. FSSAI certified. KPHB Colony, Hyderabad. Free shipping over ₹999. Pan-India delivery.",
+    "Buy homemade Andhra veg & non-veg pickles (avakaya, gongura, chicken, mutton, prawns), spice powders, traditional snacks & festive sweets online. Made with groundnut oil & organic mirchi. FSSAI certified. KPHB Colony, Hyderabad. Free shipping over ₹999. Pan-India & international delivery.",
   keywords: [
     "homemade pickles online",
     "Andhra pickles",
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     siteName: "Devi Pickles",
     title: "Devi Pickles — Homemade Andhra Pickles, Spice Powders, Snacks & Sweets",
     description:
-      "Buy homemade veg & non-veg pickles, spice powders, traditional snacks and festive sweets. Made with groundnut oil & organic mirchi. FSSAI certified. Pan-India delivery.",
+      "Buy homemade veg & non-veg pickles, spice powders, traditional snacks and festive sweets. Made with groundnut oil & organic mirchi. FSSAI certified. Pan-India & international delivery.",
     images: [
       {
         url: "/products/hero.png",
@@ -89,7 +89,7 @@ export const metadata: Metadata = {
     site: "@devipickles",
     title: "Devi Pickles — Homemade Andhra Pickles, Snacks & Sweets",
     description:
-      "Buy homemade veg & non-veg pickles, spice powders, snacks and sweets. FSSAI certified. Pan-India delivery. Free shipping over ₹999.",
+      "Buy homemade veg & non-veg pickles, spice powders, snacks and sweets. FSSAI certified. Pan-India & international delivery. Free shipping over ₹999.",
     images: ["/products/hero.png"],
   },
   robots: {

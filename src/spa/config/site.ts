@@ -26,7 +26,12 @@ export const siteConfig = {
 
   freeShippingThreshold: 999,
   flatShippingFee: 79,
-  estDeliveryDays: "3 – 6 business days",
+  estDeliveryDays: "3 – 6 business days (India)",
+  estDeliveryDaysIntl: "7 – 14 business days (International)",
+
+  // International shipping — WhatsApp-based ordering for overseas customers.
+  // Shipping is calculated per order based on destination and weight.
+  intlShippingNote: "International shipping available — contact us on WhatsApp for a shipping quote.",
 
   social: {
     instagram: "#",
