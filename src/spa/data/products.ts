@@ -813,7 +813,7 @@ export const products: Product[] = [
     descTe: "కరివేపాకు, ఎర్ర మిరప, పప్పు, చింతపండుతో చేసిన పొడి. యాంటీఆక్సిడెంట్లు, ఫైబర్, ఐరన్ పుష్కలం.",
     categoryId: "spices",
     image: "/products/curry-leaf-powder-real.png",
-    gallery: ["/products/curry-leaf-powder-real.png", "/products/curry-leaf-powder-real-2.png"],
+    gallery: ["/products/curry-leaf-powder-real.png"],
     variants: powderVariants(650),
     defaultVariantId: "v-500",
     ingredientsEn: ["Curry leaves", "Red chillies", "Toor dal", "Tamarind", "Cumin", "Salt"],
