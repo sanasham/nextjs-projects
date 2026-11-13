@@ -134,24 +134,18 @@ function ProductDetail({ product }: { product: Product }) {
               priority
               fetchPriorityHigh
             />
-            {/* Badge clusters on solid dark pill backdrops — no collision with
-                text baked into the product image. */}
-            {(product.bestseller || product.isNew) && (
-              <div className="absolute left-3 top-3 flex flex-col gap-1.5 rounded-lg bg-black/70 px-2 py-1.5 backdrop-blur-sm">
-                {product.bestseller ? (
-                  <Badge className="border-0 bg-brand-gold text-white shadow-sm">{t("common.bestSeller")}</Badge>
-                ) : null}
-                {product.isNew ? (
-                  <Badge className="border-0 bg-brand-terracotta text-white shadow-sm">{t("common.new")}</Badge>
-                ) : null}
-              </div>
-            )}
+            <div className="absolute left-3 top-3 flex flex-col gap-1.5">
+              {product.bestseller ? (
+                <Badge className="bg-brand-gold text-white">{t("common.bestSeller")}</Badge>
+              ) : null}
+              {product.isNew ? (
+                <Badge className="bg-brand-terracotta text-white">{t("common.new")}</Badge>
+              ) : null}
+            </div>
             {discount > 0 ? (
-              <div className="absolute right-3 top-3 rounded-lg bg-black/70 px-2 py-1.5 backdrop-blur-sm">
-                <Badge className="border-0 bg-brand-green text-white shadow-sm">
-                  {t("common.off", { pct: discount })}
-                </Badge>
-              </div>
+              <Badge className="absolute right-3 top-3 bg-brand-green text-white">
+                {t("common.off", { pct: discount })}
+              </Badge>
             ) : null}
           </div>
           {product.gallery.length > 1 ? (
