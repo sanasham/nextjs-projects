@@ -667,8 +667,14 @@ export const products: Product[] = [
     descTe:
       "గోంగూర ఆకులు, చికెన్‌తో చేసిన ప్రసిద్ధ ఆంధ్ర ఊరగాయ. ఆర్డర్ మీద తయారు.",
     categoryId: "pickles",
-    image: "/products/gongura-pickle.png",
-    gallery: ["/products/gongura-pickle.png", PICKLE_IMG],
+    image: "/products/gongura-chicken.png",
+
+    gallery: [
+      "/products/gongura-chicken.png",
+      "/products/gongura-chicken-1.png",
+      "/products/gongura-chicken-2.png",
+      "/products/gongura-chicken-3.png",
+    ],
     variants: pickleVariants(1100),
     defaultVariantId: "v-250",
     ingredientsEn: [
