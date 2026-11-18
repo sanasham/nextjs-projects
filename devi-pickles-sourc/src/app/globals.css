@@ -1,0 +1,224 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+  --font-telugu: var(--font-telugu);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  /* Brand tokens */
+  --color-brand-green: var(--brand-green);
+  --color-brand-green-dark: var(--brand-green-dark);
+  --color-brand-terracotta: var(--brand-terracotta);
+  --color-brand-cream: var(--brand-cream);
+  --color-brand-gold: var(--brand-gold);
+  --color-brand-ink: var(--brand-ink);
+  /* Aliases so utilities like text-cream / bg-cream / text-gold work */
+  --color-cream: var(--brand-cream);
+  --color-gold: var(--brand-gold);
+  --color-ink: var(--brand-ink);
+  --color-green: var(--brand-green);
+  --color-terracotta: var(--brand-terracotta);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 10px);
+}
+
+:root {
+  --radius: 0.75rem;
+  /* Brand palette */
+  --brand-green: #075c43;
+  --brand-green-dark: #043d2c;
+  --brand-terracotta: #8a321c;
+  --brand-cream: #f6e7b9;
+  --brand-gold: #d69b32;
+  --brand-ink: #38210f;
+
+  /* Semantic mapping */
+  --background: #fdfaf2;
+  --foreground: #38210f;
+  --card: #ffffff;
+  --card-foreground: #38210f;
+  --popover: #ffffff;
+  --popover-foreground: #38210f;
+  --primary: #075c43;
+  --primary-foreground: #ffffff;
+  --secondary: #f6e7b9;
+  --secondary-foreground: #38210f;
+  --muted: #f4ecd8;
+  --muted-foreground: #7a6a52;
+  --accent: #8a321c;
+  --accent-foreground: #ffffff;
+  --destructive: #b91c1c;
+  --border: #e7dcc2;
+  --input: #efe6cf;
+  --ring: #d69b32;
+  --chart-1: #075c43;
+  --chart-2: #8a321c;
+  --chart-3: #d69b32;
+  --chart-4: #b07a2b;
+  --chart-5: #6b8e23;
+  --sidebar: #fdfaf2;
+  --sidebar-foreground: #38210f;
+  --sidebar-primary: #075c43;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f6e7b9;
+  --sidebar-accent-foreground: #38210f;
+  --sidebar-border: #e7dcc2;
+  --sidebar-ring: #d69b32;
+}
+
+.dark {
+  --background: #1a130b;
+  --foreground: #f6e7b9;
+  --card: #241a10;
+  --card-foreground: #f6e7b9;
+  --popover: #241a10;
+  --popover-foreground: #f6e7b9;
+  --primary: #f6e7b9;
+  --primary-foreground: #38210f;
+  --secondary: #38210f;
+  --secondary-foreground: #f6e7b9;
+  --muted: #2c2114;
+  --muted-foreground: #b9a888;
+  --accent: #8a321c;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --border: #3a2b18;
+  --input: #3a2b18;
+  --ring: #d69b32;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "kern";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display), var(--font-sans), serif;
+    letter-spacing: -0.01em;
+  }
+  /* Telugu text support — Telugu glyphs are not in the latin display font,
+     so Telugu text falls back to Noto Sans Telugu for proper rendering. */
+  :lang(te), [data-lang="te"] {
+    font-family: var(--font-telugu), var(--font-sans), sans-serif;
+  }
+  :lang(te) h1, :lang(te) h2, :lang(te) h3, :lang(te) h4,
+  [data-lang="te"] h1, [data-lang="te"] h2, [data-lang="te"] h3, [data-lang="te"] h4 {
+    font-family: var(--font-telugu), var(--font-sans), sans-serif;
+    letter-spacing: 0;
+    font-weight: 600;
+  }
+  .font-telugu {
+    font-family: var(--font-telugu), var(--font-sans), sans-serif;
+  }
+  .font-display {
+    font-family: var(--font-display), var(--font-sans), serif;
+  }
+  /* When the page is in Telugu, the latin-only display font has no Telugu
+     glyphs, so headings fall back to Noto Sans Telugu for clean rendering.
+     !important needed to override the .font-display utility class. */
+  :lang(te) .font-display,
+  [data-lang="te"] .font-display,
+  :lang(te) h1, :lang(te) h2, :lang(te) h3, :lang(te) h4,
+  [data-lang="te"] h1, [data-lang="te"] h2, [data-lang="te"] h3, [data-lang="te"] h4 {
+    font-family: var(--font-telugu), var(--font-sans), sans-serif !important;
+    letter-spacing: 0;
+    font-weight: 600;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom scrollbar for premium feel */
+@layer utilities {
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: var(--brand-gold);
+    border-radius: 9999px;
+    opacity: 0.5;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: var(--brand-green);
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .bg-pattern-dots {
+    background-image: radial-gradient(circle, rgba(214, 155, 50, 0.12) 1px, transparent 1px);
+    background-size: 18px 18px;
+  }
+  .bg-pattern-paper {
+    background-color: #fdfaf2;
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(138, 50, 28, 0.04), transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(7, 92, 67, 0.04), transparent 40%);
+  }
+  .animate-fade-up {
+    animation: fadeUp 0.5s ease-out both;
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in {
+    animation: fadeIn 0.4s ease-out both;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .marquee {
+    animation: marquee 28s linear infinite;
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+}
