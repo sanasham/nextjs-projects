@@ -13,17 +13,26 @@ interface PictureProps {
   fetchPriorityHigh?: boolean;
 }
 
-// Colors for placeholder backgrounds (cycled per image src)
 const PLACEHOLDER_COLORS = [
-  "#3d6b35", "#8b6914", "#a0522d", "#5a2d10", "#6b8e23",
-  "#cd853f", "#d2691e", "#556b2f", "#8b4513", "#708090",
+  "#3d6b35",
+  "#8b6914",
+  "#a0522d",
+  "#5a2d10",
+  "#6b8e23",
+  "#cd853f",
+  "#d2691e",
+  "#556b2f",
+  "#8b4513",
+  "#708090",
 ];
 
 function getPlaceholderColor(src: string): string {
   let hash = 0;
+
   for (let i = 0; i < src.length; i++) {
     hash = ((hash << 5) - hash + src.charCodeAt(i)) | 0;
   }
+
   return PLACEHOLDER_COLORS[Math.abs(hash) % PLACEHOLDER_COLORS.length];
 }
 
@@ -37,20 +46,22 @@ export function Picture({
   style,
   fetchPriorityHigh = false,
 }: PictureProps) {
-  const [hasError, setHasError] = useState(false);
-
-  // If the src has no file extension, append .png
+  // Normalize image source.
   const hasExtension = /\.(png|jpe?g|svg|webp|avif|gif)$/i.test(src);
   const imgSrc = hasExtension ? src : `${src}.png`;
 
-  // If image fails to load (file missing), show a colored placeholder
+  // Track the failed URL rather than using a boolean.
+  // A new URL automatically gets another loading attempt.
+  const [failedSrc, setFailedSrc] = useState<string | null>(null);
+
+  const hasError = failedSrc === imgSrc;
+
   if (hasError) {
-    const color = getPlaceholderColor(src);
     return (
       <div
         className={className}
         style={{
-          backgroundColor: color,
+          backgroundColor: getPlaceholderColor(imgSrc),
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -59,7 +70,7 @@ export function Picture({
           fontWeight: 500,
           textAlign: "center",
           padding: "0.5rem",
-          ...(style as object),
+          ...style,
         }}
         role="img"
         aria-label={alt}
@@ -79,8 +90,11 @@ export function Picture({
       width={width}
       height={height}
       style={style}
-      onError={() => setHasError(true)}
-      {...(fetchPriorityHigh ? { fetchPriority: "high" as const } : {})}
+      onError={() => {
+        console.error("Failed to load image:", imgSrc);
+        setFailedSrc(imgSrc);
+      }}
+      fetchPriority={fetchPriorityHigh ? "high" : "auto"}
     />
   );
 }
